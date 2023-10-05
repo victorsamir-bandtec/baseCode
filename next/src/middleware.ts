@@ -17,6 +17,7 @@ export function middleware(request: NextRequest) {
   }
 }
 
+// Adicionar todas as rotas aqui
 export const config = {
-  matcher: ['/', '/dashboard']
+  matcher: ['/', '/dashboard', '/user']
 };

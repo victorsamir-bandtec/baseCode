@@ -9,11 +9,6 @@ import InputControled from '../../components/Input/Controled';
 
 // import { Container } from './styles';
 
-type FormInputs = {
-  username: string;
-  password: string;
-};
-
 const Login: React.FC = () => {
   const navigate = useNavigate();
 
@@ -21,6 +16,8 @@ const Login: React.FC = () => {
     username: Yup.string().required('Por favor informe seu username'),
     password: Yup.string().required('Por favor informe sua senha'),
   });
+
+  type FormInputs = Yup.InferType<typeof validationSchema>;
 
   const {
     handleSubmit,

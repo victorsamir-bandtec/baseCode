@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
 
-import { ThemeProvider } from '@/components/theme-provider';
+import { ReactQueryProvider } from '../providers/reactQueryProvider';
+
+import { ButtonTheme } from '@/components/buttonTheme';
+import { ThemeProvider } from '@/components/themeProvider';
+
 import '../styles/globals.css';
 
 export const metadata: Metadata = {
@@ -14,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
-      <html lang="en" suppressHydrationWarning>
+    <ReactQueryProvider>
+      <html lang="pt-br" suppressHydrationWarning>
         <head />
         <body>
           <ThemeProvider
@@ -24,10 +28,16 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            {children}
+            <main className="flex flex-col items-center h-[100vh]">
+              <div className="flex  w-full h-[40%] justify-end p-12">
+                <ButtonTheme />
+              </div>
+
+              {children}
+            </main>
           </ThemeProvider>
         </body>
       </html>
-    </>
+    </ReactQueryProvider>
   );
 }
