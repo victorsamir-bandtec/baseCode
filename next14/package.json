@@ -18,7 +18,7 @@
   },
   "lint-staged": {
     "src/**/*": [
-      "pnpm eslint --fix"
+      "eslint --fix"
     ]
   },
   "dependencies": {
