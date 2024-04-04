@@ -1,0 +1,13 @@
+{
+  "editor.formatOnSave": false,
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.rulers": [110],
+  "editor.wordWrapColumn": 110,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "editor.tabCompletion": "on",
+  "diffEditor.codeLens": true
+}
