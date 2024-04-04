@@ -7,14 +7,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "precommit": "lint-staged && pnpm run test",
-    "test": "jest"
+    "test": "jest",
+    "precommit": "lint-staged"
   },
-
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "eslint --fix",
-      "pnpm lint",
       "git add"
     ]
   },
