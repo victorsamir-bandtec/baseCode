@@ -9,7 +9,6 @@
     "lint": "eslint --fix",
     "test": "jest",
     "prepare": "husky"
-  
   },
 
   "husky": {
