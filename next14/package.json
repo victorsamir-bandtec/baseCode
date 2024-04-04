@@ -11,6 +11,13 @@
     "prepare": "husky",
     "precommit": "lint-staged"
   },
+  
+  "husky": {
+    "hooks": {
+      "pre-commit": "pnpm precommit"
+    }
+  },
+
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "eslint --fix",
